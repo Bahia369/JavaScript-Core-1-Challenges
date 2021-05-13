@@ -1,7 +1,8 @@
 function missingNum(arr) {
-  for (let i = 1; i <= arr.length + 1; i++) {
-    if (arr.indexOf(i) === -1) return i;
-  }
+    for (let i = 1; i <= arr.length + 1; i++) {
+        if (arr.indexOf(i) === -1)
+            return i;
+    }
 }
 
 /**                            */
@@ -19,18 +20,18 @@ test("Test 4", missingNum([10, 5, 1, 2, 4, 6, 8, 3, 9]), 7);
 test("Test 5", missingNum([1, 7, 2, 4, 8, 10, 5, 6, 9]), 3);
 
 function test(test_name, actual, expected) {
-  let status;
-  if (actual === expected) {
-    status = "PASSED";
-  } else {
-    status = `FAILED: expected: ${util.inspect(
+    let status;
+    if (actual === expected) {
+        status = "PASSED";
+    } else {
+        status = `FAILED: expected: ${util.inspect(
       expected
     )} but your function returned: ${util.inspect(actual)}`;
-  }
+    }
 
-  console.log(`${test_name}: ${status}`);
+    console.log(`${test_name}: ${status}`);
 }
 
 function generateLargeListOfNumbers() {
-  return Array.from({ length: 100 }, () => Math.floor(Math.random() * 31312));
+    return Array.from({ length: 100 }, () => Math.floor(Math.random() * 31312));
 }
